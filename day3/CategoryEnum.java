@@ -1,5 +1,3 @@
-package day3;
-
 public class CategoryEnum {
     public static void main(String[] args) {
         Category category = Category.GRANDPA;
