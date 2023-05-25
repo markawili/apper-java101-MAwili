@@ -35,7 +35,7 @@ public class Main {
                     System.out.print("Do you like to do another transaction? [Y/N]: ");
                     repeatChoice = scanner.next();
                     if(repeatChoice.equalsIgnoreCase("N")) {
-                        System.out.println("Thank you for using NoCash!");
+                        System.out.println("Thank you for using JeeCash-Mini!");
                         repeat = false;
                     }
                     System.out.println("");
@@ -52,7 +52,7 @@ public class Main {
                     System.out.print("Do you like to do another transaction? [Y/N]: ");
                     repeatChoice = scanner.next();
                     if(repeatChoice.equalsIgnoreCase("N")) {
-                        System.out.println("Thank you for using NoCash!");
+                        System.out.println("Thank you for using JeeCash-Mini!");
                         repeat = false;
                     }
                     System.out.println("");
@@ -66,7 +66,7 @@ public class Main {
                     System.out.print("Do you like to do another transaction? [Y/N]: ");
                     repeatChoice = scanner.next();
                     if(repeatChoice.equalsIgnoreCase("N")) {
-                        System.out.println("Thank you for using NoCash!");
+                        System.out.println("Thank you for using JeeCash-Mini!");
                         repeat = false;
                     }
                     System.out.println("");
@@ -75,7 +75,7 @@ public class Main {
                     System.out.print("Invalid choice. Do you like to try again? [Y/N]: ");
                     repeatChoice = scanner.next();
                     if(repeatChoice.equalsIgnoreCase("N")) {
-                        System.out.println("Thank you for using NoCash!");
+                        System.out.println("Thank you for using JeeCash-Mini!");
                         repeat = false;
                     }
                     System.out.println("");
