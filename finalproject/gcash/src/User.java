@@ -3,10 +3,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 interface Account {
-    public static void shareLoad(Map<String, User> accounts) {}
     public User registerAccount(Map<String, User> account);
 }
-public class User implements Account{
+interface Shareable {
+    public static void sendLoad(Map<String, User> accounts) {};
+}
+interface Loadable {
+    public static void receiveLoad(User account, double amountToReceive) {};
+}
+public class User implements Account, Shareable, Loadable{
     private String number;
     private String name;
     private double balance;
@@ -17,7 +22,7 @@ public class User implements Account{
         this.balance = 100;
     }
 
-    public static void shareLoad(Map<String, User> accounts) {
+    public static void sendLoad(Map<String, User> accounts) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Share-a-Load");
 
@@ -47,9 +52,13 @@ public class User implements Account{
             return;
         } else {
             sender.setBalance((sender.getBalance() - amountToSend));
-            recipient.setBalance((recipient.getBalance() + amountToSend));
+            receiveLoad(recipient, amountToSend);
         }
-        System.out.println("Transfer completed!");
+        System.out.println("Transaction complete!");
+    }
+
+    public static void receiveLoad(User recipient, double amountToReceive) {
+        recipient.setBalance((recipient.getBalance() + amountToReceive));
     }
 
     public User registerAccount(Map<String, User> accounts) {

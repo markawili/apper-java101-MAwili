@@ -42,7 +42,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("============ Send Load ============");
-                    User.shareLoad(accounts);
+                    User.sendLoad(accounts);
                     try {
 
                     } catch (Exception e) {
