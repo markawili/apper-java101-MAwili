@@ -2,15 +2,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-interface Account {
-    public User registerAccount(Map<String, User> account);
-}
-interface Shareable {
-    public static void sendLoad(Map<String, User> accounts) {};
-}
-interface Loadable {
-    public static void receiveLoad(User account, double amountToReceive) {};
-}
 public class User implements Account, Shareable, Loadable{
     private String number;
     private String name;
