@@ -13,7 +13,7 @@ public class User implements Account, Shareable, Loadable{
         this.balance = 100;
     }
 
-    public static void sendLoad(Map<String, User> accounts) {
+    public void sendLoad(Map<String, User> accounts) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Share-a-Load");
 
@@ -48,7 +48,7 @@ public class User implements Account, Shareable, Loadable{
         System.out.println("Transaction complete!");
     }
 
-    public static void receiveLoad(User recipient, double amountToReceive) {
+    public void receiveLoad(User recipient, double amountToReceive) {
         recipient.setBalance((recipient.getBalance() + amountToReceive));
     }
 

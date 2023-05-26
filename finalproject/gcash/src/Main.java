@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        User admin = new User("", "");
         initializeAccounts();
 
         boolean repeat = true;
@@ -42,7 +43,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("============ Send Load ============");
-                    User.sendLoad(accounts);
+                    admin.sendLoad(accounts);
                     try {
 
                     } catch (Exception e) {
